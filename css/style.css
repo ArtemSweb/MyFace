@@ -428,9 +428,16 @@ html {
   font-size: 0.888rem;
   color: #828282;
   font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: all ease 0.25s;
+  transition: all ease 0.25s;
 }
 
 .hero__language-item--active {
+  color: #070707;
+}
+
+.hero__language-item:hover {
   color: #070707;
 }
 
