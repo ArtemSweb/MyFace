@@ -2,12 +2,27 @@
 // @media screen and ( max-width: 1190px)
 // @media screen and ( max-width: 990px)
 @media screen and ( max-width: 767px)
+	.lock
+		overflow: hidden
 	.header
+		&__body
+			justify-content: flex-end
 		&__burger
 			display: block
 			position: relative
 			width: 30px
 			height: 20px
+			position: relative
+			z-index: 2
+			&.active
+				&::before
+					transform: rotate(45deg)
+					top: 9px
+				&::after
+					transform: rotate(-45deg)
+					bottom: 9px
+				& span
+					transform: scale(0)	
 			& span  //средняя полоса
 				position: absolute
 				width: 100%
@@ -15,6 +30,7 @@
 				left: 0
 				top: 9px
 				background-color: $color-ff
+				transition: all ease 0.25s 
 			&::before //верхняя полоса
 				content: ''
 				background-color: $color-ff
@@ -22,6 +38,7 @@
 				width: 100%
 				height: 2px
 				top: 0
+				transition: all ease 0.25s 
 			&::after //нижняя полоса
 				content: ''
 				background-color: $color-ff
@@ -29,6 +46,25 @@
 				width: 100%
 				height: 2px
 				bottom: 0
+				transition: all ease 0.25s 
+		&__menu
+			position: fixed
+			top: -100%
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: $light
+			padding: 70px 0 0 0
+			overflow: auto
+			transition: all ease 0.4s 
+			&.active
+				top: 0
+		&__list
+			display: block
+			& li
+				padding: 0 0 60px 0
+		&__link
+			font-size: 34px				
 // @media screen and ( max-width: 595px)
 // @media screen and ( max-width: 500px)
 // @media screen and ( max-width: 370px)
