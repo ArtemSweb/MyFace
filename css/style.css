@@ -483,6 +483,27 @@ html {
   height: 387px;
 }
 
+.about {
+  background-color: #f6f6f6;
+  padding: 100px 0;
+}
+
+.about__content {
+  max-width: 460px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about__text {
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.about__title {
+  font-size: 1.889rem;
+  font-weight: 700;
+}
+
 @media screen and (max-width: 767px) {
   .lock {
     overflow: hidden;
